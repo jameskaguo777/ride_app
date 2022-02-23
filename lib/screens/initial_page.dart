@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:ride_app/screens/home_page.dart';
 
 class InitialPage extends StatefulWidget {
   const InitialPage({Key? key}) : super(key: key);
@@ -59,18 +60,20 @@ class _InitialPageState extends State<InitialPage> {
                         Flexible(
                           flex: 9,
                           fit: FlexFit.tight,
-                          child: Center(
-                            child: Text('DON\'T SIT AT HOME. GO FOR A RIDE!',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headline1!
-                                    .copyWith(
-                                        height: 1.0,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .primary,
-                                        fontWeight: FontWeight.bold,
-                                        overflow: TextOverflow.fade)),
+                          child: SingleChildScrollView(
+                            child: Center(
+                              child: Text('DON\'T SIT AT HOME. GO FOR A RIDE!',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline1!
+                                      .copyWith(
+                                          height: 1.0,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .primary,
+                                          fontWeight: FontWeight.bold,
+                                          overflow: TextOverflow.fade)),
+                            ),
                           ),
                         ),
                         Flexible(
@@ -78,7 +81,7 @@ class _InitialPageState extends State<InitialPage> {
                             fit: FlexFit.tight,
                             child: InkWell(
                               onTap: () {
-                                Navigator.pushNamed(context, '/home');
+                                Navigator.pushNamed(context, HomePage.routeName);
                               },
                               child: Container(
                                 decoration: BoxDecoration(
