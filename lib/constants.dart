@@ -135,7 +135,7 @@ const List<Map<String, dynamic>> tripCollectionCONST = [
       {
         'activity_name': 'Swimming',
         'activity_image':
-            'https://www.joburg.org.za/media_/Newsroom/PublishingImages/2019%20News/Swimming.jpg',
+            'https://www.paralympic.org/sites/default/files/styles/large_original/public/images/150602104153100_kevin%2Bpaul_0.jpg?itok=OOgCzwkz',
       },
       {
         'activity_name': 'Safari',

@@ -1,5 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tz.co.ride.app.ride_app">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
    <application
         android:label="ride_app"
         android:name="${applicationName}"

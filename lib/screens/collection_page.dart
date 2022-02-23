@@ -103,35 +103,46 @@ class _CollectionPageState extends State<CollectionPage> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
-            children: [
-              Text(
-                tripCollectionCONST[index]['distance'],
-                style: Theme.of(context).textTheme.headline4!.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: Theme.of(context).colorScheme.onBackground,
-                    ),
-              ),
-              Text(
-                'Total Distance',
-                style: Theme.of(context).textTheme.caption,
-              ),
-            ],
+          Flexible(
+            flex: 1,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  tripCollectionCONST[index]['distance'],
+                  style: Theme.of(context).textTheme.headline4!.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.onBackground,
+                      ),
+                ),
+                Text(
+                  'Total Distance',
+                  style: Theme.of(context).textTheme.caption,
+                ),
+              ],
+            ),
           ),
-          Column(
-            children: [
-              Text(
-                tripCollectionCONST[index]['visitors'],
-                style: Theme.of(context).textTheme.headline4!.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: Theme.of(context).colorScheme.onBackground,
-                    ),
-              ),
-              Text(
-                'Visitors',
-                style: Theme.of(context).textTheme.caption,
-              ),
-            ],
+          Flexible(
+            flex: 1,
+            fit: FlexFit.tight,
+            child: Column(
+               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  tripCollectionCONST[index]['visitors'],
+                  style: Theme.of(context).textTheme.headline4!.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.onBackground,
+                      ),
+                ),
+                Text(
+                  'Visitors',
+                  style: Theme.of(context).textTheme.caption,
+                ),
+              ],
+            ),
           ),
         ],
       ),
