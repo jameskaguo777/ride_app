@@ -13,8 +13,9 @@ class DiscoverPage extends StatefulWidget {
 class _DiscoverPageState extends State<DiscoverPage> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox.expand(
+    return SingleChildScrollView(
       child: AnimatedContainer(
+        padding: const EdgeInsets.fromLTRB(0, 0, 0, 8.0),
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.onPrimary,
           borderRadius: const BorderRadius.only(
@@ -26,11 +27,11 @@ class _DiscoverPageState extends State<DiscoverPage> {
         child: SafeArea(
           child: Column(
             children: [
-              Flexible(child: _profileSection(), flex: 1),
-              Flexible(child: _searchSection(), flex: 1),
-              Flexible(child: _destinationSection(), flex: 2),
-              Flexible(child: _tripCollection(), flex: 4),
-              Flexible(child: _popularCars(), flex: 3),
+              _profileSection(),
+              _searchSection(),
+              _destinationSection(),
+              _tripCollection(),
+              _popularCars(),
             ],
           ),
         ),

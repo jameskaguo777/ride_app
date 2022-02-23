@@ -16,22 +16,24 @@ class _CollectionPageState extends State<CollectionPage> {
         as SelectedCollectionArguments;
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
-      body: SizedBox.expand(
-          child: SafeArea(
+      body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _backButtonRow(),
-              _collectionName(args.index),
-              _descriptionRow(args.index),
-              _statsRow(args.index),
-              _activitiesRow(args.index),
-              _bestCarsRow()
-            ],
-          ),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(0, 0, 0, 8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _backButtonRow(),
+            _collectionName(args.index),
+            _descriptionRow(args.index),
+            _statsRow(args.index),
+            _activitiesRow(args.index),
+            _bestCarsRow()
+          ],
         ),
-      )),
+      ),
+        ),
+      ),
     );
   }
 
